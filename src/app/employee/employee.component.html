@@ -1,0 +1,118 @@
+<main class="my-form">
+    <div class="cotainer">
+       
+
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Register</div>
+                        <div class="card-body">
+                            <form [formGroup] ="employeeForm" >
+                                <div class="form-group row">
+                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="full_name" formControlName="Name" class="form-control" name="full-name">
+                                                <div *ngIf="submitted && f.Name.errors" >
+                                                      <div *ngIf="f.Name.errors.required" class="validationapply">
+                                                       Fulll name is required.
+                                                        </div> 
+                                                   </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right"> Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email_address" formControlName="Address" class="form-control" name="email-address">
+                                             <div *ngIf="submitted && f.Address.errors" >
+                                                <div *ngIf="f.Address.errors.required" class="validationapply"> Address is Required </div>
+                                                   
+                                                 </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">Company Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="user_name" formControlName="CompanyName"  class="form-control" name="username">
+<div *ngIf="submitted && f.CompanyName.errors" >
+    <div *ngIf="f.CompanyName.errors.required" class="validationapply"> CompanyName Name is required.</div>
+   
+</div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Designation</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="Designation" formControlName="Designation" class="form-control">
+<div *ngIf="submitted && f.Designation.errors" >
+<div *ngIf="f.Designation.errors.required" class="validationapply" > Phone No is required. </div>
+</div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="Salary" class="col-md-4 col-form-label text-md-right">Salary</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="Salary" formControlName="Salary" class="form-control">
+<div *ngIf="submitted && f.Salary.errors">
+    <div *ngIf="f.Salary.errors.required" class="validationapply">
+        required
+    </div>
+
+</div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="MobileNo" class="col-md-4 col-form-label text-md-right">MobileNo</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="MobileNo" formControlName="MobileNo" class="form-control" name="permanent-address">
+                                   <div *ngIf="submitted && f.MobileNo.errors">
+<div *ngIf="f.MobileNo.errors.required" class="validationapply">
+    required
+</div>
+
+                                   </div>
+                                   
+                                    </div>
+                                </div>
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary" (click)="SaveEmployee(employeeForm.value)" >Register</button>
+                                       
+                                    </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <table>
+                    
+                    <tr *ngFor="let user of users">
+                        <td>
+                       {{user.employeeId}}
+                        </td>
+                        <td>
+                            {{user.name}}
+                        </td>
+                        <td>
+                            {{user.address}}
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+    
+    </div>
+
+</main>
