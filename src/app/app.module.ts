@@ -7,6 +7,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import { EmployeeComponent } from './employee/employee.component';
 import { CustomerComponent } from './customer/customer.component';
+import { StudentComponent } from './student/student.component';
 
 
 
@@ -14,7 +15,8 @@ import { CustomerComponent } from './customer/customer.component';
   declarations: [
     AppComponent,
     EmployeeComponent,
-    CustomerComponent
+    CustomerComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
